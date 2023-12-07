@@ -34,13 +34,13 @@ public class Main {
 
         System.out.println();
         System.out.println("Задача 4");
-        float deposit = 15000;
+        float deposit = 15000f;
         int general = 12_000_000;
-        double procent = 0.07;
+        float procent = 0.07f;
         int monthAccum = 1;
         while (deposit <= general) {
             deposit += deposit * procent;
-            System.out.println("Месяц " + monthAccum + ", сумма накоплений равна " + deposit + " рублей.");
+            System.out.printf("Месяц %d , сумма накоплений равна %.2f рублей. %n", monthAccum, deposit);
             monthAccum++;
         }
 
@@ -48,13 +48,13 @@ public class Main {
         System.out.println("Задача 5");
         float deposit0 = 15000;
         int general0 = 12_000_000;
-        double procent0 = 0.07;
+        float procent0 = 0.07f;
         int monthAccum0 = 1;
         while (deposit0 <= general0) {
             deposit0 += deposit0 * procent0;
             if (monthAccum0 % 6 == 0) {
-                System.out.println("Месяц " + monthAccum0 + ", сумма накоплений равна " + deposit0 +
-                        " рублей.");
+                System.out.printf("Месяц %d , сумма накоплений равна %.2f рублей. %n", monthAccum0,
+                        deposit0);
             }
             monthAccum0++;
         }
@@ -62,16 +62,17 @@ public class Main {
 
         System.out.println();
         System.out.println("Задача 6");
-        float deposit1 = 15000;
-        double procent1 = 0.07;
+        float deposit1 = 15000f;
+        float procent1 = 0.07f;
         int god = 9;
         for (int monthAccum1 = 1; monthAccum1 <= god * 12; monthAccum1++) {
             deposit1 += deposit1 * procent1;
             if (monthAccum1 % 6 == 0) {
-                System.out.println("Месяц " + monthAccum1 + ", сумма накоплений равна " + deposit1
-                        + " рублей.");
+                System.out.printf("Месяц %d , сумма накоплений равна %.2f рублей. %n", monthAccum1,
+                        deposit1);
             }
         }
+
         System.out.println();
         System.out.println("Задача 7");
         int friday = 1;
